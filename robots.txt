@@ -8,5 +8,5 @@ Disallow: /js/
 Disallow: /css/
 Disallow: /fonts/
 
-Sitemap: https://bill1003.github.io/sitemap.xml
+Sitemap: https://www.lifelab.tw/sitemap
 
