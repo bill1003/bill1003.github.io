@@ -6,17 +6,26 @@
     
 
     
-    <title>標籤: 商業技巧 | lifeLab-活力實驗室</title>
+    <title>利用QLearning實現遊戲自動闖關 | lifeLab-活力實驗室</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta property="og:type" content="website">
-<meta property="og:title" content="lifeLab-活力實驗室">
-<meta property="og:url" content="https://www.lifelab.tw/tags/商業技巧/index.html">
+        <meta name="keywords" content="人工智能,QLearning,強化學習">
+    
+    <meta name="description" content="善用QLearning遊戲自動闖關再也不是難事！">
+<meta name="keywords" content="人工智能,QLearning,強化學習">
+<meta property="og:type" content="article">
+<meta property="og:title" content="利用QLearning實現遊戲自動闖關">
+<meta property="og:url" content="https://www.lifelab.tw/2019/06/23/QLearningBird/index.html">
 <meta property="og:site_name" content="lifeLab-活力實驗室">
+<meta property="og:description" content="善用QLearning遊戲自動闖關再也不是難事！">
 <meta property="og:locale" content="zh-TW">
+<meta property="og:image" content="https://cdn-images-1.medium.com/max/2000/0*p-TjC-BQuUUSLgIi">
+<meta property="og:updated_time" content="2019-06-23T03:34:04.817Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="lifeLab-活力實驗室">
+<meta name="twitter:title" content="利用QLearning實現遊戲自動闖關">
+<meta name="twitter:description" content="善用QLearning遊戲自動闖關再也不是難事！">
+<meta name="twitter:image" content="https://cdn-images-1.medium.com/max/2000/0*p-TjC-BQuUUSLgIi">
     
 
     
@@ -143,73 +152,182 @@ ga('send', 'pageview');
                         <div class="main-body-header">
     <h1 class="header">
     
-    <i class="icon fa fa-tag"></i>標籤: <em>商業技巧</em>
+    未分類
     </h1>
 </div>
 
                         <div class="main-body-content">
-                            
-
-    
-    
+                            <article id="post-QLearningBird" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
         
-        
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/archives/2019" class="archive-year"><i class="icon fa fa-calendar-o"></i>2019</a>
-            </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2019/05/19/restuarant/" class="thumbnail">
-    
-    
-        <span style="background-image:url(https://cdn-images-1.medium.com/max/2000/0*9Fic6N-M3nR2J4VX)" alt="增加餐廳回訪率的妙招!" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier data-disqus-url="https://www.lifelab.tw/2019/05/19/restuarant/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            
-            </div>
-            <div class="date"><time datetime="2019-05-19T02:07:05.000Z" itemprop="datePublished">2019-05-19</time></div>
-        </div>
-        
+            <header class="article-header">
+                
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2019/05/19/restuarant/">增加餐廳回訪率的妙招!</a>
+        利用QLearning實現遊戲自動闖關
         </h1>
     
 
-        <p class="article-excerpt">
-            每每看一次都覺得震憾受用的餐飲妙招
-        </p>
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2019/06/23/QLearningBird/" class="article-date">
+            <time datetime="2019-06-23T03:28:12.000Z" itemprop="datePublished">2019-06-23</time>
+        </a>
     </div>
-</article>
-    
+
+		
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/QLearning/">QLearning</a>, <a class="tag-link" href="/tags/人工智能/">人工智能</a>, <a class="tag-link" href="/tags/強化學習/">強化學習</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <p>善用QLearning遊戲自動闖關再也不是難事！</p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/0*p-TjC-BQuUUSLgIi" alt><br><a id="more"></a><br>深度學習在遊戲上的應用又增添一個有趣的案例，之前爆紅的遊戲Flappy Bird日前在網路上，有人透過QLearing，建構出可以使自動闖關的神經網路，非常厲害！</p>
+<h3 id="程序主要步驟"><a href="#程序主要步驟" class="headerlink" title="程序主要步驟"></a>程序主要步驟</h3><ol>
+<li><p>將大畫面切成很多小畫面</p>
+</li>
+<li><p>建構CNN神經網絡反覆訓練，訓練到能夠找到小鳥位置</p>
+</li>
+<li><p>建立損失函數預測小腦的運動軌跡，並吐出預測的下一步移動值</p>
+</li>
+<li><p>若給出的移動值能夠延長遊戲時間，就加重函式的權重及比例</p>
+</li>
+<li><p>反覆嘗試直到整體神經網絡能最大化拉長遊戲的時間</p>
+</li>
+</ol>
+<p><img src="https://cdn-images-1.medium.com/max/2234/0*xq_Sob89R_ccCRzG" alt="不同像素捲積層辨認到的小鳥位置"><em>不同像素捲積層辨認到的小鳥位置</em></p>
+<p><img src="https://cdn-images-1.medium.com/max/2128/0*m7y41WgbvVg_bbUe" alt></p>
+<h3 id="深度學習的難點在哪裡？"><a href="#深度學習的難點在哪裡？" class="headerlink" title="深度學習的難點在哪裡？"></a>深度學習的難點在哪裡？</h3><p>深度學習通常最大的難點在於你要<strong>得到反饋</strong>，依照反饋的結果你才可以不斷的訓練神經網絡去產生下一個步驟，舉例來說，若要訓練一個機器手臂堆起樂高，那麼你要先讓機器辨認出樂高的具體位置、狀態</p>
+<blockquote>
+<h1 id="物體與環境的交互感知往往是在做深度學習時的最大障礙"><a href="#物體與環境的交互感知往往是在做深度學習時的最大障礙" class="headerlink" title="物體與環境的交互感知往往是在做深度學習時的最大障礙"></a>物體與環境的交互感知往往是在做深度學習時的最大障礙</h1></blockquote>
+<h3 id="什麼是增強式學習？"><a href="#什麼是增強式學習？" class="headerlink" title="什麼是增強式學習？"></a>什麼是增強式學習？</h3><p>增強式學習主要有三大步驟</p>
+<ol>
+<li><p>動作</p>
+</li>
+<li><p>觀察</p>
+</li>
+<li><p>反饋</p>
+</li>
+</ol>
+<p>而強化學習最大的任務就是找到一個學習策略，最大程度地得到正向的反饋，其實跟我們人類蠻像的，有獎賞才肯繼續做下去ＸＤ</p>
+<p><img src="https://cdn-images-1.medium.com/max/2108/0*aR2EoBvdOsC6onOE.png" alt></p>
+<h3 id="最終程序實現出來的效果圖"><a href="#最終程序實現出來的效果圖" class="headerlink" title="最終程序實現出來的效果圖"></a>最終程序實現出來的效果圖</h3><p><img src="https://cdn-images-1.medium.com/max/2000/0*f_iaFOp3zsgNEOwE.gif" alt></p>
+<p>是不是很有趣？動手玩玩看吧！</p>
+<p><a href="https://www.facebook.com/lifelab.tw/photos/a.2237683493151633/2250970028489646/?type=3&amp;theater" target="_blank" rel="noopener">下載完整程式碼</a></p>
+<h3 id="猜你喜歡"><a href="#猜你喜歡" class="headerlink" title="猜你喜歡"></a>猜你喜歡</h3><p><a href="https://www.facebook.com/lifelab.tw/photos/a.2237683493151633/2250970028489646/?type=3&amp;theater" target="_blank" rel="noopener">風格遷移.利用AI將普通圖片變成大師畫作</a></p>
+<p><a href="https://www.facebook.com/lifelab.tw/photos/a.2237683493151633/2250487565204559/?type=3&amp;theater" target="_blank" rel="noopener">利用GAN實現人臉自動上妝</a></p>
+
         </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="https://www.lifelab.tw/2019/06/23/QLearningBird/" data-id="cjx8eef5d000m1nhloz06f3r0" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "author": {
+            "@type": "Person",
+            "name": "lifeLab"
+        },
+        "headline": "利用QLearning實現遊戲自動闖關",
+        "image": "https://www.lifelab.twhttps://cdn-images-1.medium.com/max/2000/0*p-TjC-BQuUUSLgIi",
+        "keywords": "人工智能 QLearning 強化學習",
+        "genre": "",
+        "datePublished": "2019-06-23",
+        "dateCreated": "2019-06-23",
+        "dateModified": "2019-06-23",
+        "url": "https://www.lifelab.tw/2019/06/23/QLearningBird/",
+        "description": "善用QLearning遊戲自動闖關再也不是難事！
+"
+        "wordCount": 46
+    }
+</script>
+
+</article>
+
+    <section id="comments">
     
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
 
-
-    </div></section>
+    
+    </section>
 
 
 
@@ -231,6 +349,19 @@ ga('send', 'pageview');
             
         </ul>
     </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2019/06/01/styleTransfer/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">上一篇</strong>
+        <p class="article-nav-title">風格遷移.利用AI將普通圖片變成大師畫作</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
     
     <div class="widgets-container">
         
@@ -444,11 +575,13 @@ ga('send', 'pageview');
     var disqus_shortname = 'www-lifelab-tw';
     
     
+    var disqus_url = 'https://www.lifelab.tw/2019/06/23/QLearningBird/';
+    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>
