@@ -8,4 +8,5 @@ Disallow: /js/
 Disallow: /css/
 Disallow: /fonts/
 
-Sitemap: https://www.energylab01.com/sitemap.xml
+Sitemap: https://www.lifelab.tw/sitemap
+
