@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>lifeLab-活力實驗室</title>
+  <title>energylab01-活力實驗室</title>
   
   
   <link href="/atom.xml" rel="self"/>
@@ -10,7 +10,7 @@
   <id>https://www.energylab01.com/</id>
   
   <author>
-    <name>lifeLab</name>
+    <name>energylab01</name>
     
   </author>
   
