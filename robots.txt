@@ -8,5 +8,4 @@ Disallow: /js/
 Disallow: /css/
 Disallow: /fonts/
 
-Sitemap: https://www.energylab01.com/sitemap
-
+Sitemap: https://www.energylab01.com/sitemap.xml
